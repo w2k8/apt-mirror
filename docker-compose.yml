@@ -1,0 +1,18 @@
+version: "3"
+services:
+  mirror:
+    image: apt-mirror:dev
+    volumes:
+    - ./apt-mirror:/var/spool/apt-mirror
+    - ./entrypoint.sh:/entrypoint.sh
+  
+  web:
+    image: python:3.9.0-alpine
+    volumes:
+    - ./apt-mirror:/var/www/html
+    command: python3 -m http.server 80 
+    ports:
+    - "80:80"
+    working_dir: /var/www/html
+
+  

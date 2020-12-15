@@ -1,0 +1,46 @@
+
+############# config ##################
+#
+# set base_path    /var/spool/apt-mirror
+#
+# set mirror_path  $base_path/mirror
+# set skel_path    $base_path/skel
+# set var_path     $base_path/var
+# set cleanscript $var_path/clean.sh
+# set defaultarch  <running host architecture>
+# set postmirror_script $var_path/postmirror.sh
+# set run_postmirror 0
+set nthreads     20
+set _tilde 0
+#
+############# end config ##############
+
+# Trusty: 14.04
+
+#deb http://archive.ubuntu.com/ubuntu trusty main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu trusty-security main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu trusty-updates main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu trusty-proposed main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu trusty-backports main restricted universe multiverse
+
+
+# Xenial: 16.04
+
+#deb http://archive.ubuntu.com/ubuntu xenial main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu xenial-security main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu xenial-updates main restricted universe multiverse
+
+# Bionic: 18.04
+
+deb http://archive.ubuntu.com/ubuntu bionic main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu bionic-security main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu bionic-updates main restricted universe multiverse
+
+# Focal: 16.04
+
+deb http://archive.ubuntu.com/ubuntu focal main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu focal-security main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu focal-updates main restricted universe multiverse
+
+
+clean http://archive.ubuntu.com/ubuntu
